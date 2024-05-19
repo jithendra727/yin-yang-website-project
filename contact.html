@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>yin yang koi blade</title>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <div class="container nav-container">
+        <input class="checkbox" type="checkbox" name="" id="" />
+        <div class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </div>
+        <div class="logo">
+          
+          <img src="logo.svg" alt="Anime Sword Shop Logo">
+          
+        </div>
+        <ul class="menu-items">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="detail.html">Sword Details</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Absolutely positioned -->  
+  <div style="text-align: center;">
+    <img src="mainlogo.svg" alt="Image" style="display: block; margin: 0 auto;width: 500px;"> 
+  </div>
+
+ 
+
+    <main class="container">
+        <section class="content-section">
+            <div class="left-box">
+                <h1>Contact Us</h1><br>
+                <p>If you have any questions or inquiries, feel free to reach out to us.</p>
+                    <div class="layer first-layer">
+                        <div class="contact-form">
+                            <form id="contact-form" onsubmit="return sendEmail()">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" required><br>
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" required><br>
+
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" id="phone" required><br>
+
+                                <label for="message">Message:</label>
+                                <textarea id="message" rows="4" required></textarea><br>
+
+                                <button type="submit">Send Message</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="right-box">
+                    <div class="image-changer">
+                        <img class="slideshow-image" src="contact1.jpg" alt="Image 1">
+                        <img class="slideshow-image" src="contact2.jpg" alt="Image 2">
+                        <img class="slideshow-image" src="contact3.jpg" alt="Image 3">
+                        <img class="slideshow-image" src="contact4.jpg" alt="Image 4">
+                        <img class="slideshow-image" src="contact5.jpg" alt="Image 5">
+                        <img class="slideshow-image" src="contact6.jpg" alt="Image 6">
+                        <img class="slideshow-image" src="contact7.jpg" alt="Image 7">
+                        <img class="slideshow-image" src="contact8.jpg" alt="Image 8">
+                        <img class="slideshow-image" src="contact9.jpg" alt="Image 9">
+                        <img class="slideshow-image" src="contact10.jpg" alt="Image 10">
+                    </div>
+                </div>
+            </section>
+            <div class="border-box">
+                <div class="contact-info">
+                    <a href="https://www.swordsofnorthshire.com/" target="_blank">Visit Swords of Northshire</a>
+                    <div>
+                        <p>Telephone: <a href="tel:+123456789">123-456-789</a></p>
+                        <p>Email: <a href="mailto:info@swordsofnorthshire.com">info@swordsofnorthshire.com</a></p>
+                    </div>
+                </div>
+            </div>
+    </main>
+
+    <script>
+        function sendEmail() {
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+            const message = document.getElementById("message").value;
+    
+            // Initialize Email.js with your user ID
+            emailjs.init("user_your_emailjs_user_id");
+    
+            // Send the email
+            emailjs.send("service_your_service_id", "template_your_template_id", {
+                to_email: "",
+                from_name: name,
+                from_email: email,
+                phone: phone,
+                message: message,
+            })
+            .then(function(response) {
+                console.log("Email sent successfully:", response);
+                alert("Message sent successfully!");
+            }, function(error) {
+                console.error("Error sending email:", error);
+                alert("Error sending message. Please try again later.");
+            });
+            return false;
+        }
+
+        // image changer
+        const images = document.querySelectorAll('.slideshow-image');
+        let currentIndex = 0;
+
+        function showImage(index) {
+        images.forEach(image => {
+            image.style.display = 'none';
+        });
+
+        images[index].style.display = 'block';
+        }
+
+        function changeImage() {
+        currentIndex = (currentIndex + 1) % images.length;
+        showImage(currentIndex);
+        }
+
+        setInterval(changeImage, 2000); // Change image every 2 seconds
+    </script>
+</body>
+<footer>
+    &copy; 2023 Anime Sword Shop
+</footer>

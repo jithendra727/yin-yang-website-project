@@ -1,0 +1,425 @@
+/* styles.css */
+
+/* Your existing styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    color: #012E4A;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+      padding: 0;
+      background-color: #E8EDE7;
+}
+
+.container {
+  max-width: 1050px;
+  width: 90%;
+  margin: auto;
+}
+
+.navbar {
+  width: 100%;
+  box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+.navbar .menu-items {
+  display: flex;
+}
+
+.navbar .nav-container li {
+  list-style: none;
+}
+
+.navbar .nav-container a {
+  text-decoration: none;
+  color: #012E4A;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem;
+}
+
+.navbar .nav-container a:hover{
+    font-weight: bolder;
+}
+
+.nav-container {
+  display: block;
+  position: relative;
+  height: 60px;
+}
+
+.nav-container .checkbox {
+  position: absolute;
+  display: block;
+  height: 32px;
+  width: 32px;
+  top: 20px;
+  left: 20px;
+  z-index: 5;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.nav-container .hamburger-lines {
+  display: block;
+  height: 26px;
+  width: 32px;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.nav-container .hamburger-lines .line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #012E4A;
+}
+
+.nav-container .hamburger-lines .line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-container .hamburger-lines .line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.navbar .menu-items {
+  padding-top: 120px;
+  box-shadow: inset 0 0 2000px rgba(2, 21, 43, 0.445);
+  height: 100vh;
+  width: 100%;
+  transform: translate(-150%);
+  display: flex;
+  flex-direction: column;
+  margin-left: -40px;
+  padding-left: 50px;
+  transition: transform 0.5s ease-in-out;
+  text-align: center;
+}
+
+.navbar .menu-items li {
+  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.logo {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 1.2rem;
+  color: #012E4A;
+}
+
+.logo img {
+  height: 50px; /* You can adjust the height as needed */
+   
+
+}
+.nav-container input[type="checkbox"]:checked ~ .menu-items {
+  transform: translateX(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+  transform: rotate(45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+  transform: scaleY(0);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+  transform: rotate(-45deg);
+}
+
+.nav-container input[type="checkbox"]:checked ~ .logo{
+  display: none;
+}
+
+/* Left section styles */
+
+/* Positioning for left and right boxes */
+.content-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .left-box {
+    flex: 1;
+    margin-right: 20px; /* Add spacing between boxes */
+  }
+  
+  .right-box {
+    flex: 1;
+  }
+
+
+#rcorners2 {
+    border-radius: 25px;
+    border: 2px solid #378BA4;
+    padding: 20px;
+    width: 100%;
+    height: 100%;
+    margin-right: 20px;
+  }
+  
+  #rcorners2 h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  #rcorners2 p {
+    font-size: 1rem;
+  }
+  
+  /* Right section styles */
+  .image-changer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Slideshow styles */
+  .slideshow-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .slideshow-image.active {
+    display: block;
+  }
+  
+  .product-btn {
+    background-image: url('290F.gif');
+    background-size: cover; 
+    width: 200px;
+    height: 60px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    color: #E8EDE7;
+    align-items: center;
+    display: block;
+  margin: 0 auto;
+  }
+
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+
+      /* Product styles */
+
+.product {
+    border-radius: 25px;
+    border: 2px solid #378BA4;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: 100%;
+    height: 700;
+  }
+  
+  .product img {
+    width: 600px;
+    height: 100%;
+  }
+
+
+  .sticky{
+    padding: 1px;
+    position: sticky;  
+    top:2px;  
+    font-size:20px;  
+    color: #2f1412; 
+    
+  }
+
+  .sticky a {
+    color: #2f1412;
+    text-decoration: none;
+    margin: 0 10px;
+    background-color: #81BECE;
+    border: 1px solid #012E4A;
+    padding: 2.5px 5px; /* Adjust the padding as needed */
+    border-radius: 8px;
+
+  }
+
+
+  /* about page  */
+
+  
+  .layer {
+    display: flex;
+
+    margin: 20px;
+
+  
+  }
+
+  .border-box {
+      width: 100%;
+      height: 100%;
+      border: 2px solid #378BA4;
+      padding: 20px;
+      margin-right: 20px;
+    }
+
+
+/* contact us page  */
+
+ .contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .contact-form {
+    border-radius: 25px;
+      border: 2px solid #378BA4;
+      padding: 20px;
+      width: 100%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+  }
+  .contact-form label, .contact-form input, .contact-form textarea, .contact-form button {
+    margin-bottom: 10px;
+  }
+  .contact-form button {
+    background-color: #378BA4;
+    color: #E8EDE7;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .contact-form button:hover {
+    background-color: #378BA4;
+  }
+
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    border-radius: 5px;
+  }
+  .contact-info a {
+    color: #378BA4;
+  }
+
+
+  /* sworddetail page  */
+
+
+  /* Additional styles for the layers */
+.layer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.layer1 {
+  background-color: #F7F7F7; /* Change the color for each layer */
+}
+
+.layer2 {
+  background-color: #E8EDE7;
+}
+
+/* Add more layer colors as needed */
+
+.border-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 25px;
+  border: 2px solid #378BA4;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-box {
+  flex: 1;
+  margin-right: 20px;
+  padding: 10px;
+}
+
+.right-box {
+  flex: 1;
+}
+
+.right-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.right-box p {
+  font-size: 1rem;
+}
+
+.left-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.left-box p {
+  font-size: 1rem;
+}
+
+.right-box img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.left-box img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+
