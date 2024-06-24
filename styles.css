@@ -24,6 +24,7 @@ body {
 }
 
 .navbar {
+  height: 75px;
   width: 100%;
   box-shadow: 0 1px 4px rgb(146 161 176 / 15%);
 }
@@ -32,7 +33,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 62px;
+  height: 100px;
 }
 
 .navbar .menu-items {
@@ -128,16 +129,51 @@ body {
   font-weight: 500;
 }
 
+
+ul{
+  float: right;
+  list-style-type: none;
+  margin-top: 20px;
+  min-height: 100px;       
+  margin-right: 60px;
+  font-size: 17px;
+}
+
+ul li{
+list-style: none;
+display: inline-block;
+padding:8px 12px;
+position: relative;
+
+}
+
+ul li a{
+  text-decoration: none;
+  color:#012E4A ;
+  padding:5px 20px;
+  border:1px solid transparent;
+  transition: 0.5 ease;
+  
+}
+
+ul li a:hover{
+  background-color: 012E4A;
+  color:black;
+  transition: 0.5 ease;
+
+}
+
+
 .logo {
   position: absolute;
   top: 5px;
-  right: 15px;
+  left: 15px;
   font-size: 1.2rem;
   color: #012E4A;
 }
 
 .logo img {
-  height: 50px; /* You can adjust the height as needed */
+  height: 60px; /* You can adjust the height as needed */
    
 
 }
@@ -221,7 +257,7 @@ body {
   }
   
   .product-btn {
-    background-image: url('290F.gif');
+    background-image: url('img/290F.gif');
     background-size: cover; 
     width: 200px;
     height: 60px;
