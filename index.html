@@ -3,107 +3,66 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <!-- <link rel="stylesheet" href="./stylehome.css"> -->
+  <link rel="stylesheet" href="test.css">
   <title>yin yang koi blade</title>
 </head>
 <body>
   <nav>
-    <div class="navbar">
-      <div class="container nav-container">
-        <input class="checkbox" type="checkbox" name="" id="" />
-        <!-- <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
-        </div> -->
-        <div class="logo">
-          
-          <img src="img/logo.svg" alt="Anime Sword Shop Logo">
-          
+    <div class="main">
+        <div class="container nav-container">
+            <div class="menubar">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Anime Sword Shop Logo">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./detail.html">Sword Details</a></li> 
+                        <li><a href="./product.html">product</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-          <div class="menubar">
-            <ul>
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./detail.html">Sword Details</a></li> 
-              <li><a href="./product.html">product</a></li>
-              <li><a href="./about.html">About Us</a></li>
-              <li><a href="./contact.html">Contact</a></li>
-              
-            </ul>
-          </div>
-          <!-- <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="detail.html">Sword Details</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul> -->
-      </div>
     </div>
-  </nav>
 
-  <!-- Absolutely positioned -->  
-  <div style="text-align: center;">
-    <img src="img/mainlogo.svg" alt="Image" style="display: block; margin: 0 auto;width: 500px;"> 
-  </div>
-
-
-  <main class="main-content">
+<!-- Absolutely positioned -->  
+ <div class ="logoimg">
+    <img src="img/mainlogo.svg" alt="Image"> 
+ </div>
+<main class="main-content">
     <section class="content-section">
-      <div class="left-box">
-        <div id="rcorners2">
-    
-        <h2>Welcome</h2>
-        <h4>fellow anime fans!</h4>
-        
-        <p>Here at yin yang koi blade, you can live your samurai dreams. Our website is dedicated to providing information and acquiring high quality, realistic swords modeled after iconic blades from your favorite shows.</p>
-        <p>Browse our catalog to learn about popular weapons like the Buster Sword from Final Fantasy or Hiei's katana from YuYu Hakusho. Discover facts, origins, combat capabilities and more.</p>
-        <p>When you're ready to add to your impressive collection, we make it easy to find and purchase durable metal replicas made by master forgers. Owning and wielding anime swords is an incredible experience every fan should have.</p>
-        <p>Let your inner shinobi or meister loose here. Draw your blade and enter our world of imagination made real through expertly crafted swords fit for anime heroes. We're thrilled to share our passion and help you connect more deeply with the anime you love.</p> 
-      </div>
-    </div>
-      <div class="right-box">
-        <div class="image-changer">
-            <img class="slideshow-image" src="img/1.jpg" alt="Image 1">
-            <img class="slideshow-image" src="img/2.jpg" alt="Image 2">
-            <img class="slideshow-image" src="img/3.webp" alt="Image 3">
-            <img class="slideshow-image" src="img/4.jpg" alt="Image 4">
-            <img class="slideshow-image" src="img/5.webp" alt="Image 5">
+        <div class="left-box">
+            <div id="rcorners2">
+               
+                <h2>Welcome</h2>
+                <h4>fellow anime fans!</h4>
+            
+                <p>Here at yin yang koi blade, you can live your samurai dreams. Our website is dedicated to providing information and acquiring high quality, realistic swords modeled after iconic blades from your favorite shows.</p>
+                <p>Browse our catalog to learn about popular weapons like the Buster Sword from Final Fantasy or Hiei's katana from YuYu Hakusho. Discover facts, origins, combat capabilities and more.</p>
+                <p>When you're ready to add to your impressive collection, we make it easy to find and purchase durable metal replicas made by master forgers. Owning and wielding anime swords is an incredible experience every fan should have.</p>
+                <p>Let your inner shinobi or meister loose here. Draw your blade and enter our world of imagination made real through expertly crafted swords fit for anime heroes. We're thrilled to share our passion and help you connect more deeply with the anime you love.</p> 
+            </div>
         </div>
-      </div>
+        <div class="right-box">
+            <div class="image-changer">
+                <img class="slideshow-image" src="img/1.jpg" alt="Image 1">
+                <img class="slideshow-image" src="img/2.jpg" alt="Image 2">
+                <img class="slideshow-image" src="img/3.webp" alt="Image 3">
+                <img class="slideshow-image" src="img/4.jpg" alt="Image 4">
+                <img class="slideshow-image" src="img/5.webp" alt="Image 5">
+            </div>
+        </div>
     </section>
-
-  </main>
- 
-      <a href="product.html">
+</main>
+    <a href="product.html">
         <button class="product-btn">See Products
-    </button>
-  </a>
-  <footer>
-    <P>Copyright © 2023 Yin Yang Koi Blades</P>
-  </footer>
-  
+        </button>
+    </a>
+    <footer>
+        <P>Copyright © 2023 Yin Yang Koi Blades</P>
+    </footer>
 
-  <script>
-    const images = document.querySelectorAll('.slideshow-image');
-    let currentIndex = 0;
-
-    function showImage(index) {
-      images.forEach(image => {
-        image.style.display = 'none';
-      });
-
-      images[index].style.display = 'block';
-    }
-
-    function changeImage() {
-      currentIndex = (currentIndex + 1) % images.length;
-      showImage(currentIndex);
-    }
-
-    setInterval(changeImage, 3000); // Change image every 3 seconds
-  </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
+
