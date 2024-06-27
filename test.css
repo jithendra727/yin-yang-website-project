@@ -151,7 +151,7 @@ top: 10cm;
 ull{
     float: right;
     list-style-type: none;
-    margin-top: 30px;
+    margin-top: 50px;
     min-height: 400px;       
     margin-right: 60px;
     font-size: 17px;
@@ -199,6 +199,19 @@ ull li a:hover{
   border: 2px solid #378BA4;
   padding: 20px;
   width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  text-align: center ;
+  display: flex;
+  justify-content: space-between;
+  border: 4px ;
+  padding: 20px;
+  width: 90%;
   max-width: 1200px;
   margin: 0 auto;
   background-color: white; 
