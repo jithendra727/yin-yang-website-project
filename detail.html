@@ -3,53 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="test.css">
   <title>yin yang koi blade</title>
 </head>
 <body>
   <nav>
-    <div class="navbar">
-      <div class="container nav-container">
-        <input class="checkbox" type="checkbox" name="" id="" />
-        <div class="hamburger-lines">
-          <span class="line line1"></span>
-          <span class="line line2"></span>
-          <span class="line line3"></span>
+    <div class="main">
+        <div class="container nav-container">
+            <div class="menubar">
+                <div class="logo">
+                    <img src="img/logo.svg" alt="Anime Sword Shop Logo">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./detail.html">Sword Details</a></li> 
+                        <li><a href="./product.html">product</a></li>
+                        <li><a href="./about.html">About Us</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="logo">
-          
-          <img src="img/logo.svg" alt="Anime Sword Shop Logo">
-          
-        </div>
-        <!-- <ul class="menu-items">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="detail.html">Sword Details</a></li>
-            <li><a href="product.html">Products</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul> -->
-      </div>
     </div>
-  </nav>
 
-  <!-- Absolutely positioned -->  
-  <div style="text-align: center;">
-    <img src="img/mainlogo.svg" alt="Image" style="display: block; margin: 0 auto;width: 500px;padding: 50px"> 
+<!-- Absolutely positioned -->  
+<div style="text-align: center;">
+    <!-- <img src="img/mainlogo.svg" alt="Image" style="display: block; margin: 0 auto;width: 500px;padding: 50px">  -->
   </div>
+<di class="title">
+  <h1 >Sword Detail</h1>
+</di>
 
-  <h1 style="padding: 30px;">Sword Detail</h1>
-
-
-  <ul class="sticky">
+<div class="sticky-container">
+  <nav class="sticky-nav">
     <nav>
-    <li> <a href="#page1">Safety</a></li>
-    <li> <a href="#page2">Combat Capabilities</a></li>
+    <ul>
+    <li><a href="#page1">Safety</a></li>
+    <li><a href="#page2">Combat Capabilities</a></li>
     <li><a href="#page3">Popular Swords</a></li>
     <li><a href="#page4">Care & Maintenance</a></li>
     <li><a href="#page5">categories</a></li>
-
+  </ul>
     </nav>
-</ul>
+  </div>
+
 
   <div id="page1">
   <div class="layer layer1">
@@ -75,7 +71,6 @@
   </div>
 
   <div id="page2">
-  <div class="layer layer2">
     <div class="border-box">
       <div class="left-box">
         <img src="img/combat.webp" alt="Combat Capabilities">
@@ -91,13 +86,11 @@
             Each of our test cuts with this katana have shown incredible slicing potential.
         </p>
       </div>
-    </div>
   </div>
   </div>
 
   <div id="page3">
-  <div class="layer layer3">
-    <div class="border-box">
+      <div class="border-box">
       <div class="left-box">
         <h2>Popular Swords</h2>
         <ul>
@@ -128,10 +121,8 @@
       </div>
     </div>
   </div>
-  </div>
 
   <div id="page4">
-  <div class="layer layer4">
     <div class="border-box">
       <div class="left-box">
         <img src="img/safety.jpg" alt="Care & Maintenance">
@@ -151,11 +142,9 @@
       </div>
     </div>
   </div>
-  </div>
 
 
 <div id="page5">
-  <div class="layer layer5">
     <div class="border-box">
       <div class="left-box">
         <h2>categories</h2><ul>
@@ -182,15 +171,17 @@
       </div>
     </div>
   </div>
-  </div>
   <!-- Add more layers following the same structure -->
 
+  <footer>
+    <P>Copyright © 2023 Yin Yang Koi Blades</P>
+  </footer>
 
 
 
 
 
-  <script>
+  <!-- <script>
     function sendEmail() {
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
@@ -216,27 +207,11 @@
             alert("Error sending message. Please try again later.");
         });
         return false;
-    }
+    } -->
 
-    // image changer
-    const images = document.querySelectorAll('.slideshow-image');
-    let currentIndex = 0;
+    <script src="script.js"></script>
 
-    function showImage(index) {
-    images.forEach(image => {
-        image.style.display = 'none';
-    });
-
-    images[index].style.display = 'block';
-    }
-
-    function changeImage() {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-    }
-
-    setInterval(changeImage, 5000); // Change image every 5 seconds
-</script>
+    </script>
 
 </body>
 </html>
